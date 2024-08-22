@@ -3,118 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Edge Company</title>
+    <title>Personalize Your Hoodie</title>
 </head>
 <body>
-    <center>
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/en/6/6f/Newedge_logo.jpg" alt="New Edge Company Logo">
-        <h1>New Edge Company</h1>
+        <h1>Design Your Own Hoodie</h1>
     </header>
+    <main>
+        <form action="/process-order" method="post">
+            <section>
+                <h2>Customize Your Hoodie</h2>
 
-    <nav>
-        <h2>SERVICES</h2>
-        <ul>
-            <li><a href="#buy-new-software">Buy New Software</a></li>
-            <li><a href="#upgrade-to-new-one">Upgrade to New One</a></li>
-            <li><a href="#maintenance">Maintenance</a></li>
-            <li><a href="#query">Query</a></li>
-        </ul>
-    </nav>
+                <label for="message">Custom Message:</label>
+                <input type="text" id="message" name="message" placeholder="Enter your custom message" required>
 
-    <section>
-        <h2>Company Details</h2>
-        <table>
-            <tr>
-                <td>Name:</td>
-                <td>New Edge Company</td>
-            </tr>
-            <tr>
-                <td>Address:</td>
-                <td>MG Road, Ram Niwas, 4th Floor, Ghatkopar West, Mumbai 400080</td>
-            </tr>
-            <tr>
-                <td>Contact:</td>
-                <td>Phone: <a href="tel:9345678923">9345678923</a></td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td><a href="mailto:newedge@info.in">newedge@info.in</a></td>
-            </tr>
-        </table>
-        <p>We at New Edge believe in the latest updates that keep us ahead in the game and keep our customers satisfied.</p>
-    </section>
+                <label for="hoodieColor">Hoodie Color:</label>
+                <select id="hoodieColor" name="hoodieColor" required>
+                    <option value="">Choose a color</option>
+                    <option value="grey">Grey</option>
+                    <option value="navy">Navy</option>
+                    <option value="maroon">Maroon</option>
+                    <option value="olive">Olive</option>
+                    <option value="purple">Purple</option>
+                </select>
 
-    <section>
-        <h2>Introduction Audio</h2>
-        <audio controls>
-            <source src="introduction-audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </section>
+                <label for="sizeChoice">Size:</label>
+                <select id="sizeChoice" name="sizeChoice" required>
+                    <option value="">Select size</option>
+                    <option value="xs">XS</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                    <option value="xxl">XXL</option>
+                </select>
 
-    <section>
-        <h2>Promotional Video</h2>
-        <video controls width="600">
-            <source src="promotional-video.mp4" type="video/mp4">
-            Your browser does not support the video element.
-        </video>
-    </section>
+                <label for="numHoodies">Number of Hoodies:</label>
+                <input type="number" id="numHoodies" name="numHoodies" min="1" placeholder="How many?" required>
 
-    <section id="buy-new-software">
-        <h3>Buy New Software</h3>
-        <p>Welcome customer to the humble abode. Get ready to explore a wide variety of products.</p>
-    </section>
+                <label for="orderDate">Preferred Delivery Date:</label>
+                <input type="date" id="orderDate" name="orderDate" required>
+            </section>
 
-    <section id="upgrade-to-new-one">
-        <h3>Upgrade to New One</h3>
-        <p>If the old one is giving you trouble, update it. If not, buy it - you won't regret it.</p>
-    </section>
+            <section>
+                <h2>Shipping Information</h2>
 
-    <section id="maintenance">
-        <h3>Maintenance</h3>
-        <p>Troubleshooting if required.</p>
-    </section>
+                <label for="recipientName">Full Name:</label>
+                <input type="text" id="recipientName" name="recipientName" placeholder="Name of the recipient" required>
 
-    <section id="query">
-        <h3>Query</h3>
-        <p>If you have any queries, feel free to contact us. Help is always available.</p>
-    </section>
+                <label for="shippingAddress">Address:</label>
+                <input type="text" id="shippingAddress" name="shippingAddress" placeholder="Delivery address" required>
 
-    <!-- New Sections Added -->
-    <section>
-        <h2>Our Mission</h2>
-        <p>At New Edge Company, our mission is to drive technological innovation and provide exceptional services that enhance the productivity and success of our clients.</p>
-    </section>
+                <label for="contactEmail">Email Address:</label>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="Your email address" required>
 
-    <section>
-        <h2>Customer Testimonials</h2>
-        <blockquote>
-            "New Edge Company has transformed our business operations with their state-of-the-art software solutions. Their customer support is top-notch!" - <cite>Jane Doe, CEO of TechCorp</cite>
-        </blockquote>
-        <blockquote>
-            "I highly recommend New Edge Company for their reliable and efficient maintenance services. They always deliver on time!" - <cite>John Smith, IT Manager at Innovate Ltd.</cite>
-        </blockquote>
-    </section>
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" placeholder="Your phone number" pattern="[0-9]{10}" required>
+            </section>
 
-    <section>
-        <h2>Latest News</h2>
-        <article>
-            <h3>New Product Launch</h3>
-            <p>We are excited to announce the launch of our new software product that promises to revolutionize the industry with its innovative features and user-friendly interface. Stay tuned for more updates!</p>
-        </article>
-        <article>
-            <h3>Industry Award</h3>
-            <p>New Edge Company has been awarded the Best Technology Provider of the Year by the National Tech Awards. This recognition is a testament to our commitment to excellence and innovation.</p>
-        </article>
-    </section>
+            <section>
+                <label for="additionalNotes">Additional Notes:</label>
+                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Any special instructions or requests"></textarea>
+            </section>
 
-    <footer>
-        <p>Follow us on social media:</p>
-        <a href="https://facebook.com/NewEdgeCompany" target="_blank">Facebook</a> |
-        <a href="https://twitter.com/NewEdgeCompany" target="_blank">Twitter</a> |
-        <a href="https://linkedin.com/company/NewEdgeCompany" target="_blank">LinkedIn</a>
-    </footer>
-</center>
+            <button type="submit">Place Order</button>
+            <button type="reset">Clear Form</button>
+        </form>
+    </main>
 </body>
 </html>
